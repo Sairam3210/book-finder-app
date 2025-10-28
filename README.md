@@ -3,6 +3,11 @@
 A modern, responsive web application built using **React** and the **Open Library API**.  
 This app allows users to search and explore books by title, view book details, and learn more about each book — designed with simplicity and usability in mind.
 
+Preview Image
+<img width="1916" height="905" alt="image" src="https://github.com/user-attachments/assets/f16415e1-aa06-494f-8aab-9a4f8a29e57d" />
+
+
+
 ---
 
 ## 🎯 Objective
