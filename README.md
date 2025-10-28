@@ -1,70 +1,169 @@
-# Getting Started with Create React App
++ # 📚 LITSEEK — Book Finder App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern, responsive web application built using **React** and the **Open Library API**.  
+This app allows users to search and explore books by title, view book details, and learn more about each book — designed with simplicity and usability in mind.
 
-## Available Scripts
+---
+
+## 🎯 Objective
+
+The **Book Finder App** was developed for the Take‑Home Challenge to demonstrate the ability to:
+- Understand and interpret user requirements.
+- Build a functional and user-friendly web application.
+- Integrate public APIs using React.
+- Showcase clean design and coding practices.
+
+---
+
+## 🧑‍💻 User Persona: Alex
+
+**Name:** Alex  
+**Occupation:** College Student  
+**Need:** Alex wants to search and explore books easily for study and leisure.  
+The app provides a clean, intuitive way to discover books with relevant information like title, author, and subjects.
+
+---
+
+## 🚀 Features
+
+✅ Search books by title using the **Open Library API**  
+✅ View cover, title, author, edition count, and publication year  
+✅ Explore detailed information including description and subjects  
+✅ Smooth in-page navigation (Home ↔ About)  
+✅ Responsive and clean UI design  
+✅ Loader for API fetching and fallback images for missing covers  
+✅ Safe handling for missing or incomplete data
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** React 18  
+- **Routing:** React Router DOM 6  
+- **API:** Open Library (https://openlibrary.org)  
+- **Styling:** Plain CSS (modularized per component)  
+- **Icons:** React Icons  
+- **State Management:** React Context API  
+- **Deployment:** CodeSandbox / StackBlitz / GitHub Pages
+
+---
+
+## ⚙️ Installation and Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/book-finder-app.git
+
+# Navigate into the project folder
+cd book-finder-app
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm start
+```
+
+---
+
+## 🧩 Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+```bash
+npm start
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ #Runs the app in development mode.
+ Open http://localhost:3000 to view it in your browser.
+ 
+ #The page reloads automatically when you make changes.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+npm test
 
-### `npm test`
+ #Launches the test runner in watch mode.See the testing documentation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+npm run build
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Builds the app for production in the build folder.
+# It bundles React in production mode and optimizes performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+npm run eject
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 🌐 Deployment
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+This project can be deployed for free on:
+- [CodeSandbox](https://codesandbox.io/)
+- [StackBlitz](https://stackblitz.com/)
+- [GitHub Pages](https://pages.github.com/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+👉 Example Live Demo: _Add your deployment link here_
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📄 API Reference
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+**Base URL:** `https://openlibrary.org/`
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Feature | API Endpoint | Description |
+|----------|---------------|-------------|
+| Search Books | `/search.json?title={bookTitle}` | Fetches list of books based on title |
+| Book Details | `/works/{id}.json` | Returns detailed info about a specific book |
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 📁 Folder Structure
 
-### Analyzing the Bundle Size
+```
+book-finder-app/
+│
+├── public/
+│   └── index.html
+│
+├── src/
+│   ├── components/
+│   │   ├── Navbar/
+│   │   ├── Header/
+│   │   ├── SearchForm/
+│   │   ├── BookList/
+│   │   ├── BookDetails/
+│   │   └── Loader/
+│   │
+│   ├── pages/
+│   │   ├── Home/
+│   │   └── About/
+│   │
+│   ├── context.js
+│   ├── index.js
+│   └── index.css
+│
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+---
 
-### Making a Progressive Web App
+## 🧠 How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Users enter a **book title** in the search bar.  
+2. The app fetches data from the Open Library API.  
+3. The book list updates dynamically using the global context.  
+4. Clicking on a book opens its **details page** with description and subjects.  
+5. Navigation between sections (Home ↔ About) is smooth and responsive.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔒 Error Handling
 
-### Deployment
+- Fallback messages for empty or invalid searches.  
+- Default “No Image” cover for books without cover IDs.  
+- Graceful API failure handling using `try/catch` blocks.  
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### ⭐ If you found this project helpful, give it a star on GitHub!
